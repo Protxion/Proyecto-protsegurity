@@ -212,3 +212,30 @@ WHERE servicio.Servicio LIKE '%FALLA_ELECTRICA'
 GROUP BY ubicaciones.Estrato
 ORDER BY Tiempo_de_respuesta DESC;
 ```
+# Conclusiones del proyecto, para bases de datos
+> El estudio realizado sobre los incidentes atendidos por el cuerpo de bomberos en Bogotá ha proporcionado una visión profunda y detallada de la naturaleza y frecuencia de las emergencias en la ciudad. A través de una base de datos robusta y bien estructurada, se recopilaron datos esenciales que permitieron identificar patrones significativos en los incidentes, tales como las áreas con mayor incidencia de emergencias, los tipos más comunes de incidentes y los tiempos de respuesta promedio.
+
+Este análisis detallado ha facilitado la evaluación de la eficiencia operativa del cuerpo de bomberos, destacando tanto sus fortalezas como las áreas que necesitan mejoras. Por ejemplo, se identificaron zonas geográficas que requieren una mayor presencia de recursos. Además, la base de datos ha permitido una consulta rápida y eficiente de la información, lo que mejora la capacidad de planificación y la toma de decisiones estratégicas.
+
+Los resultados de este estudio demuestran la importancia de una gestión de datos efectiva para optimizar la respuesta a emergencias y mejorar la seguridad pública. Al identificar patrones y tendencias en los incidentes, el cuerpo de bomberos puede implementar estrategias más precisas y efectivas, mejorar la asignación de recursos y reducir los tiempos de respuesta. En conclusión, este proyecto resalta la necesidad de inversiones continuas en tecnología de la información y capacitación, fortaleciendo así la capacidad de respuesta del cuerpo de bomberos y contribuyendo a una Bogotá más segura y resiliente.
+
+# Planes a futuro
+
+###Expansión y Actualización de la Base de Datos:
+> Integración con otras entidades de emergencia: Ampliar la base de datos para incluir información de otras entidades de emergencia en Bogotá, como la policía y servicios médicos de urgencia, para tener una visión más completa de la respuesta a incidentes en la ciudad.
+### Modelos predictivos: 
+> Desarrollar algoritmos de inteligencia artificial y modelos predictivos que analicen los datos históricos para prever futuros incidentes.
+### Asignación dinámica: 
+> Utilizar los datos para optimizar la asignación de recursos, asegurando que las áreas con mayor incidencia de emergencias tengan una cobertura adecuada de personal y equipos.
+### Estudios conjuntos:
+> Realizar estudios conjuntos con otras entidades de emergencia y universidades para identificar áreas de mejora y desarrollar nuevas estrategias de respuesta.
+### Entrenamiento basado en datos: 
+> Desarrollar programas de capacitación que utilicen los datos recopilados para entrenar a los bomberos en escenarios realistas y basados en patrones reales de emergencias.
+### Análisis de causas raíz: 
+> Realizar estudios detallados sobre las causas raíz de los incidentes más comunes, ayudando a desarrollar programas de prevención más efectivos.
+### Aplicaciones móviles: 
+> Desarrollar aplicaciones móviles para que el personal de emergencia pueda acceder y actualizar datos en el campo, mejorando la eficiencia y la coordinación.
+### Infraestructura tecnológica: 
+> Invertir en infraestructura tecnológica avanzada para soportar el almacenamiento y procesamiento de grandes volúmenes de datos.
+### Estudio de coordinación: 
+> Analizar cómo se coordinan las respuestas a emergencias entre los servicios publicos. 
