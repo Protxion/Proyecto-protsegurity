@@ -45,7 +45,7 @@ Herramientas Utilizadas:
 > Aporte: Estructuran y gestionan datos transaccionales con integridad y relaciones bien definidas.
 Aplicación: Manejan datos estructurados, como registros de eventos y metadatos de sensores.
 
-## Bases de Datos NoSQL:
+### Bases de Datos NoSQL:
 
 > a) Ofrecen flexibilidad y escalabilidad para manejar datos no estructurados y semiestructurados.
 Aplicación: Almacenan grandes volúmenes de datos de imágenes y audio, así como logs de sensores.
