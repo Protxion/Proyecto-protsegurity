@@ -154,4 +154,63 @@ SET IdServicio = NULLIF(@IdServicio, ''),
     Tiempo_de_Respuesta = STR_TO_DATE(@Tiempo_de_Respuesta, '%h:%i:%s %p');
 ```
 
+## Paso 3: Consultas SQL
+
+A continuación, se presentan más de  preguntas con sus respectivas respuestas en MySQL.
+
+### 1. Obtener todos los eventos
+```sql
+SELECT * FROM eventos;
+```
+### 2. Obtener todos los servicio de tipo "INCENDIOS"
+```sql
+SELECT * FROM servicio WHERE Clase_de_servicio LIKE '%INCENDIOS';
+```
+### 3. Contar el número de incidentes por estación
+```sql
+SELECT Estacion, COUNT(*) AS Numero_servicio 
+FROM eventos
+GROUP BY Estacion;
+```
+### 4. Obtener el número total de hombres y mujeres expuestos en todos los incidentes
+```sql
+SELECT SUM(HOMBRES_EXPUESTOS) AS total_hombres_expuestos, 
+SUM(MUJERES_EXPUESTAS) AS total_mujeres_expuestas 
+FROM afectados;
+```
+### 5. Obtener todos los incidentes reportados en un rango de fechas específico
+```sql
+SELECT * FROM eventos
+WHERE Fecha_del_evento 
+BETWEEN '2020-01-01' AND '2020-05-04';
+```
+### 6. Obtener la media de tiempo de respuesta para los incidentes de tipo "Incendio"
+```sql
+SELECT * FROM eventos
+WHERE Fecha_del_evento 
+BETWEEN '2020-01-01' AND '2020-05-04';
+```
+### 7. Obtener la media de tiempo de respuesta para los incidentes de tipo "Incendio"
+```sql
+SELECT AVG(TIME_TO_SEC(Tiempo_de_respuesta)) / 60 AS avg_response_time_minutes
+FROM servicio 
+JOIN eventos ON eventos.IdEvento = Servicio.idServicio
+WHERE servicio LIKE '%INCENDIOS';
+```
+### 8. Obtener todos los incidentes con más de 5 personas expuestas
+```sql
+SELECT * FROM eventos
+JOIN afectados ON afectados.IdAFECTADOS = afectados.IdAFECTADOS 
+WHERE HOMBRES_EXPUESTOS + MUJERES_EXPUESTAS + MENORES_NINAS_EXPUESTAS + MENORES_NINOS_EXPUESTOS > 5;
+```
+### 9. Obtener el incidente con el mayor número de personas heridas
+```sql
+SELECT * FROM eventos 
+JOIN afectados ON afectados.IdAFECTADOS = afectados.IdAFECTADOS 
+ORDER BY HOMBRES_EXPUESTOS + MUJERES_EXPUESTAS + MENORES_NINAS_EXPUESTAS + MENORES_NINOS_EXPUESTOS DESC 
+LIMIT 1;
+```
+
+
+
 
