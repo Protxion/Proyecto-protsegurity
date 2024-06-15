@@ -1,16 +1,14 @@
 # Proyecto-protsegurity
-Problema:
+## Problema:
 La gestión eficiente y segura de grandes volúmenes de datos es un desafío crítico para un sistema de seguridad doméstica basado en IA. Se necesita una infraestructura de base de datos que soporte el almacenamiento, procesamiento y análisis de datos en tiempo real provenientes de múltiples fuentes (cámaras, micrófonos, sensores de movimiento).
 
-Solución:
+## Solución:
 Desarrollar una base de datos robusta y escalable que permita la integración y gestión de datos multimodales (imágenes, audio, datos de sensores) para mejorar la detección de incidentes y la respuesta en tiempo real. La base de datos debe ser capaz de soportar consultas complejas y análisis predictivos para optimizar continuamente la precisión del sistema de seguridad.
 
-Objetivo Principal:
+## Objetivo Principal:
 Implementar una base de datos eficiente y escalable que soporte la infraestructura de un sistema de seguridad doméstica basado en IA, permitiendo el almacenamiento, procesamiento y análisis en tiempo real de datos multimodales.
 
-Objetivos Complementarios:
-
-Gestión Eficiente de Datos:
+## Gestión Eficiente de Datos:
 Diseñar una base de datos que maneje grandes volúmenes de datos de diversas fuentes de manera eficiente.
 Análisis en Tiempo Real:
 Facilitar el análisis y la respuesta en tiempo real mediante técnicas avanzadas de procesamiento de datos.
@@ -19,12 +17,12 @@ Asegurar la protección de datos sensibles y la privacidad de los usuarios media
 Herramientas y Métodos
 Herramientas Utilizadas:
 
-Bases de Datos Relacionales (SQL):
+## Bases de Datos Relacionales (SQL):
 
 Aporte: Estructuran y gestionan datos transaccionales con integridad y relaciones bien definidas.
 Aplicación: Manejan datos estructurados, como registros de eventos y metadatos de sensores.
 
-Bases de Datos NoSQL:
+## Bases de Datos NoSQL:
 
 a) Ofrecen flexibilidad y escalabilidad para manejar datos no estructurados y semiestructurados.
 Aplicación: Almacenan grandes volúmenes de datos de imágenes y audio, así como logs de sensores.
@@ -39,7 +37,7 @@ Aplicación: Soporta la expansión y accesibilidad global del sistema de segurid
 Aplicaciones de la Base de Datos
 Aplicaciones:
 
-Almacenamiento y Recuperación de Datos:
+## Almacenamiento y Recuperación de Datos:
 Facilita el acceso rápido y seguro a datos históricos y en tiempo real.
 Análisis Predictivo y Detección de Patrones:
 Utiliza datos históricos para predecir y prevenir futuros incidentes.
@@ -50,7 +48,7 @@ Almacena y procesa datos para generar alertas y notificaciones en tiempo real.
 Requisitos y Características de la Base de Datos
 Requisitos:
 
-Escalabilidad:
+## Escalabilidad:
 Capaz de manejar un creciente volumen de datos a medida que se agregan más usuarios y sensores.
 Flexibilidad:
 Soporte para diferentes tipos de datos (imágenes, audio, texto).
@@ -62,16 +60,14 @@ Disponibilidad:
 Alta disponibilidad para garantizar que los datos estén accesibles en cualquier momento.
 Características:
 
-Distribución Geográfica:
+## Distribución Geográfica:
 Bases de datos distribuidas globalmente para reducir latencias y mejorar la disponibilidad.
 Redundancia y Respaldo:
 Implementación de mecanismos de respaldo y recuperación para asegurar la continuidad del servicio.
 Optimización para Consultas Complejas:
 Estructuras de índices y optimización de consultas para mejorar la eficiencia en la recuperación de datos.
 
-## Consultas
-
-Estas son las consultas que realizamos junto a i compañero Jhon Alejandro Buitrago.
+# Consultas
 
 ### Obtener todos los incidentes
 ```sql
