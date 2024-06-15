@@ -68,3 +68,126 @@ Redundancia y Respaldo:
 Implementación de mecanismos de respaldo y recuperación para asegurar la continuidad del servicio.
 Optimización para Consultas Complejas:
 Estructuras de índices y optimización de consultas para mejorar la eficiencia en la recuperación de datos.
+
+#Consultas, Realizadas para la base de datos
+
+#Obtener todos los incidentes
+```sql
+SELECT * FROM eventos;
+```
+#Obtener todos los servicio de tipo "INCENDIOS"
+```sql
+SELECT * FROM servicio WHERE Clase_de_servicio LIKE '%INCENDIOS';
+```
+#Contar el número de incidentes por estación
+```sql
+SELECT Estacion, COUNT(*) AS Numero_de_servicio 
+FROM eventos
+GROUP BY Estacion;
+```
+#Obtener el número total de hombres y mujeres expuestos en todos los incidentes
+```sql
+SELECT SUM(HOMBRES_EXPUESTOS) AS total_hombres_expuestos, SUM(MUJERES_EXPUESTAS) AS mujeres_expuestas 
+FROM afectados;
+```
+#Obtener todos los incidentes reportados en un rango de fechas específico
+```sql
+SELECT * FROM eventos
+WHERE Fecha_del_evento BETWEEN '2020-01-01' AND '2020-05-04';
+```
+#Obtener la media de tiempo de respuesta para los incidentes de tipo "Incendio"
+```sql
+SELECT AVG(TIME_TO_SEC(Tiempo_de_respuesta)) / 60 AS Tiempo_de_respuesta
+FROM servicio 
+JOIN eventos ON eventos.IdEvento = Servicio.idServicio
+WHERE servicio LIKE '%INCENDIOS';
+```
+#Obtener todos los incidentes con más de 5 personas expuestas
+```sql
+SELECT * FROM eventos
+JOIN afectados ON afectados.IdAFECTADOS = afectados.IdAFECTADOS 
+WHERE HOMBRES_EXPUESTOS + MUJERES_EXPUESTAS + MENORES_NINAS_EXPUESTAS + MENORES_NINOS_EXPUESTOS > 5;
+```
+#Obtener el incidente con el mayor número de personas heridas
+```sql
+SELECT * FROM eventos 
+JOIN afectados ON afectados.IdAFECTADOS = afectados.IdAFECTADOS 
+ORDER BY HOMBRES_EXPUESTOS + MUJERES_EXPUESTAS + MENORES_NINAS_EXPUESTAS + MENORES_NINOS_EXPUESTOS DESC 
+LIMIT 1;
+```
+#Obtener el porcentaje de incidentes por tipo de servicio
+```sql
+SELECT servicio, COUNT(idServicio) * 100.0 / (SELECT COUNT(*) FROM eventos) AS Porcentaje
+FROM eventos 
+JOIN servicio ON idServicio = idServicio
+GROUP BY servicio;
+```
+#Obtener los 5 barrios con más incidentes reportados
+```sql
+SELECT ubicaciones.Barrio, COUNT(eventos.IdEvento) AS Numero_incidentes
+FROM eventos
+JOIN ubicaciones ON ubicaciones.IdUbicacion = ubicaciones.IdUbicacion
+GROUP BY ubicaciones.Barrio
+ORDER BY Numero_incidentes DESC
+LIMIT 5;
+```
+#Encontrar el incidente con el mayor tiempo de respuesta en cada localidad
+```sql
+SELECT servicio.*, ubicaciones.Localidad
+FROM servicio
+JOIN ubicaciones ON servicio.idServicio = ubicaciones.IdUbicacion
+WHERE (ubicaciones.Localidad, servicio.Tiempo_de_respuesta) IN (
+    SELECT Localidad, MAX(Tiempo_de_respuesta)
+    FROM servicio
+    JOIN ubicaciones ON servicio.idServicio = ubicaciones.IdUbicacion
+    GROUP BY Localidad
+);
+
+```
+#Obtener la suma total de hombres y mujeres expuestos por barrio y clase de servicio
+```sql
+SELECT ubicaciones.Barrio, servicio.Clase_de_servicio, 
+       SUM(afectados.HOMBRES_EXPUESTOS) AS total_hombres_expuestos, 
+       SUM(afectados.MUJERES_EXPUESTAS) AS total_mujeres_expuestas
+FROM servicio
+JOIN ubicaciones ON servicio.idServicio = ubicaciones.IdUbicacion
+JOIN afectados ON servicio.idServicio = afectados.IdAFECTADOS
+GROUP BY ubicaciones.Barrio, servicio.Clase_de_servicio;
+```
+
+#Obtener la tendencia trimestral de incidentes con origen de causa "Falsa alarma" durante el año 2020
+```sql
+SELECT QUARTER(eventos.Fecha_del_evento) AS trimestre, 
+       COUNT(*) AS Numero_de_incidentes
+FROM eventos
+JOIN servicio ON eventos.IdEvento = servicio.idServicio
+WHERE servicio.Servicio LIKE '%FALSA_ALARMA' AND YEAR(eventos.Fecha_del_evento) = 2020
+GROUP BY trimestre
+ORDER BY trimestre;
+```
+
+#Obtener los 3 barrios con el mayor número de incidentes de tipo "Rescate" y el total de personas afectadas en ellos
+```sql
+SELECT ubicaciones.Barrio, COUNT(eventos.IdEvento) AS Numero_de_incidentes, 
+       SUM(afectados.HOMBRES_EXPUESTOS + afectados.MUJERES_EXPUESTAS + afectados.MENORES_NINAS_EXPUESTAS + afectados.MENORES_NINOS_EXPUESTOS) AS total_afectados
+FROM eventos
+JOIN ubicaciones ON eventos.IdEvento = ubicaciones.IdUbicacion
+JOIN afectados ON eventos.IdEvento = afectados.IdAFECTADOS
+JOIN servicio ON eventos.IdEvento = servicio.idServicio
+WHERE servicio.Servicio LIKE '%Rescate'
+GROUP BY ubicaciones.Barrio
+ORDER BY Numero_de_incidentes DESC
+LIMIT 3;
+```
+#Obtener la relación entre el tiempo de respuesta y el número de personas afectadas por origen de causa "Falla electrica" en los diferentes estratos socioeconómicos
+```sql
+SELECT ubicaciones.Estrato, 
+      AVG(TIME_TO_SEC(servicio.Tiempo_de_respuesta)) / 60 AS Tiempo_de_respuesta,
+      SUM(afectados.HOMBRES_EXPUESTOS + afectados.MUJERES_EXPUESTAS + afectados.MENORES_NINAS_EXPUESTAS + afectados.MENORES_NINOS_EXPUESTOS) AS total_afectados
+FROM servicio
+JOIN ubicaciones ON servicio.idServicio = ubicaciones.IdUbicacion
+JOIN afectados ON servicio.idServicio = afectados.IdAFECTADOS
+WHERE servicio.Servicio LIKE '%FALLA_ELECTRICA'
+GROUP BY ubicaciones.Estrato
+ORDER BY Tiempo_de_respuesta DESC;
+```
