@@ -121,21 +121,28 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
+```
+```sql
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/afectados.csv'
 INTO TABLE afectados
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
+```
+```sql
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/ubicaciones.csv'
 INTO TABLE ubicaciones
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
+```
+```sql
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/servicioss.csv'
 INTO TABLE servicio
-FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
 (@IdServicio, @Servicio, @Clase_de_servicio, @Origen_de_la_causa, @Hora_reporte, @Tiempo_de_Respuesta)
@@ -146,6 +153,5 @@ SET IdServicio = NULLIF(@IdServicio, ''),
     Hora_reporte = STR_TO_DATE(@Hora_reporte, '%h:%i:%s %p'),
     Tiempo_de_Respuesta = STR_TO_DATE(@Tiempo_de_Respuesta, '%h:%i:%s %p');
 ```
-
 
 
