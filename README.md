@@ -2,36 +2,36 @@
 
 # Proyecto-protsegurity
 
-> Este proyecto se centra en el análisis y gestión de datos de incidentes atendidos por el cuerpo de bomberos en la ciudad de Bogotá. Utilizando una base de datos robusta y bien estructurada, se recopilaron y organizaron datos detallados sobre diversos tipos de incidentes, desde incendios hasta emergencias médicas y rescates. La base de datos permite un almacenamiento eficiente y una consulta rápida de la información, facilitando la identificación de patrones, la evaluación de la respuesta de los bomberos y la implementación de mejoras operativas. Este enfoque basado en datos proporciona una visión integral de la frecuencia, localización y naturaleza de los incidentes, mejorando la capacidad de respuesta y planificación estratégica de los servicios de emergencia en Bogotá.
+> Este proyecto se centra en la creacion de una aplicacion de seguridad avanzada, con el uso de I.A, realizamos un estudio a csos atendidos por bomberos en la ciudad de Bogota,para asi determinar incidentes comunes, tiempos de respuesta etc... Utilizando una base de datos robusta y bien estructurada, se recopilaron y organizaron datos detallados sobre diversos tipos de incidentes, desde incendios hasta emergencias médicas y rescates. La base de datos permite un almacenamiento eficiente y una consulta rápida de la información, facilitando la identificación de patrones, la evaluación de la respuesta de los bomberos y la implementación de mejoras operativas. Este enfoque basado en datos proporciona una visión integral de la frecuencia, localización y naturaleza de los incidentes, mejorando la capacidad de respuesta y planificación estratégica de los servicios de emergencia en Bogotá.
 
 ## Built With
 
 - Sql
-- 
+
 ## Authors
 
 👤 **Santiago Sandoval Urrego**
 
-- GitHub: [@user](https://github.com/Protxion)
+- GitHub: [@Protxion](https://github.com/Protxion)
 
 👤 **Jhon Alejandro Buitrago**
 
-- GitHub: [@user](https://github.com/Alecjandro)
+- GitHub: [@Alecjandro](https://github.com/Alecjandro)
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Problema:
+### Problema:
 La gestión eficiente y segura de grandes volúmenes de datos es un desafío crítico para un sistema de seguridad doméstica basado en IA. Se necesita una infraestructura de base de datos que soporte el almacenamiento, procesamiento y análisis de datos en tiempo real provenientes de múltiples fuentes (cámaras, micrófonos, sensores de movimiento).
 
-## Solución:
+### Solución:
 Desarrollar una base de datos robusta y escalable que permita la integración y gestión de datos multimodales (imágenes, audio, datos de sensores) para mejorar la detección de incidentes y la respuesta en tiempo real. La base de datos debe ser capaz de soportar consultas complejas y análisis predictivos para optimizar continuamente la precisión del sistema de seguridad.
 
-## Objetivo Principal:
+### Objetivo Principal:
 Implementar una base de datos eficiente y escalable que soporte la infraestructura de un sistema de seguridad doméstica basado en IA, permitiendo el almacenamiento, procesamiento y análisis en tiempo real de datos multimodales.
 
-## Gestión Eficiente de Datos:
+### Gestión Eficiente de Datos:
 Diseñar una base de datos que maneje grandes volúmenes de datos de diversas fuentes de manera eficiente.
 Análisis en Tiempo Real:
 Facilitar el análisis y la respuesta en tiempo real mediante técnicas avanzadas de procesamiento de datos.
@@ -40,7 +40,7 @@ Asegurar la protección de datos sensibles y la privacidad de los usuarios media
 Herramientas y Métodos
 Herramientas Utilizadas:
 
-## Bases de Datos Relacionales (SQL):
+### Bases de Datos Relacionales (SQL):
 
 Aporte: Estructuran y gestionan datos transaccionales con integridad y relaciones bien definidas.
 Aplicación: Manejan datos estructurados, como registros de eventos y metadatos de sensores.
@@ -60,7 +60,7 @@ Aplicación: Soporta la expansión y accesibilidad global del sistema de segurid
 Aplicaciones de la Base de Datos
 Aplicaciones:
 
-## Almacenamiento y Recuperación de Datos:
+### Almacenamiento y Recuperación de Datos:
 Facilita el acceso rápido y seguro a datos históricos y en tiempo real.
 Análisis Predictivo y Detección de Patrones:
 Utiliza datos históricos para predecir y prevenir futuros incidentes.
@@ -71,7 +71,7 @@ Almacena y procesa datos para generar alertas y notificaciones en tiempo real.
 Requisitos y Características de la Base de Datos
 Requisitos:
 
-## Escalabilidad:
+### Escalabilidad:
 Capaz de manejar un creciente volumen de datos a medida que se agregan más usuarios y sensores.
 Flexibilidad:
 Soporte para diferentes tipos de datos (imágenes, audio, texto).
@@ -83,7 +83,7 @@ Disponibilidad:
 Alta disponibilidad para garantizar que los datos estén accesibles en cualquier momento.
 Características:
 
-## Distribución Geográfica:
+### Distribución Geográfica:
 Bases de datos distribuidas globalmente para reducir latencias y mejorar la disponibilidad.
 Redundancia y Respaldo:
 Implementación de mecanismos de respaldo y recuperación para asegurar la continuidad del servicio.
