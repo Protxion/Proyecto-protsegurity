@@ -51,11 +51,11 @@ Aplicación: Manejan datos estructurados, como registros de eventos y metadatos 
 Aplicación: Almacenan grandes volúmenes de datos de imágenes y audio, así como logs de sensores.
 Herramientas de Análisis de Big Data:
 
-B) Permiten el procesamiento y análisis de grandes volúmenes de datos.
+> B) Permiten el procesamiento y análisis de grandes volúmenes de datos.
 Aplicación: Facilitan el análisis predictivo y la detección de patrones en los datos históricos.
 Infraestructura en la Nube:
 
-C) Proporciona escalabilidad y disponibilidad para la base de datos.
+> C) Proporciona escalabilidad y disponibilidad para la base de datos.
 Aplicación: Soporta la expansión y accesibilidad global del sistema de seguridad.
 Aplicaciones de la Base de Datos
 Aplicaciones:
