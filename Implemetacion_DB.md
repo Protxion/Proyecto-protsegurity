@@ -90,6 +90,65 @@ CREATE TABLE Estrato (
 );
 ```
 
+## Paso 2: Importación de los datos
+
+Se realizo la importación por medio de de codigo MySQL
+
+Primero buscaremos la carpeta donde debemos dejar nuestros archivos CSV para luego ser cargados.
+
+### Busqueda de carpeta aceptada por MySQL
+
+```sql
+SHOW VARIABLES LIKE 'secure_file_priv';
+```
+Resultado entregado:
+<p aling="center">
+    <img src="https://github.com/Protxion/Proyecto-protsegurity/assets/170147724/b8a0c1a8-51d4-4147-bc7a-914f8bfa02de">
+</p>
+
+A continuación, cargamos nuestros archivos CSV en la ruta designada para que pudiéramos importar los datos correspondientes a las tablas ya creadas en nuestra base de datos. 
+Este paso fue crucial para poblar la base de datos con la información real, permitiéndonos comenzar a trabajar con datos concretos.
+Aseguramos que los archivos CSV estuvieran bien formateados y que los datos estuvieran limpios para evitar errores durante el proceso de importación.
+
+![image](https://github.com/Protxion/Proyecto-protsegurity/assets/170147724/33b0a208-e777-4110-b258-01d847a1765e)
+
+### Importacion de tablas
+
+```sql
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/eventos.csv'
+INTO TABLE eventos
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/afectados.csv'
+INTO TABLE afectados
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/ubicaciones.csv'
+INTO TABLE ubicaciones
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/servicioss.csv'
+INTO TABLE servicio
+FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(@IdServicio, @Servicio, @Clase_de_servicio, @Origen_de_la_causa, @Hora_reporte, @Tiempo_de_Respuesta)
+SET IdServicio = NULLIF(@IdServicio, ''),
+    Servicio = @Servicio,
+    Clase_de_servicio = @Clase_de_servicio,
+    Origen_de_la_causa = @Origen_de_la_causa,
+    Hora_reporte = STR_TO_DATE(@Hora_reporte, '%h:%i:%s %p'),
+    Tiempo_de_Respuesta = STR_TO_DATE(@Tiempo_de_Respuesta, '%h:%i:%s %p');
+```
 
 
 
