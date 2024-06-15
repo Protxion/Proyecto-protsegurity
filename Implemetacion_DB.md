@@ -22,25 +22,34 @@ CREATE TABLE eventos (
     `IdEvento` INT AUTO_INCREMENT PRIMARY KEY,
     `Fecha_del_evento` DATETIME,
     `Numero_servicio` INT,
-    `Estacion` VARCHAR(100),
+    `IdUbicacion` INT,
+    `IdCausa` INT,
+    `IdEstacion` INT,
+    FOREIGN KEY (`IdUbicacion`) REFERENCES ubicaciones(`IdUbicacion`),
+    FOREIGN KEY (`IdCausa`) REFERENCES Causa(`IdCausa`),
+    FOREIGN KEY (`IdEstacion`) REFERENCES Estacion(`IdEstacion`)
 );
 CREATE TABLE ubicaciones (
     `IdUbicacion` INT AUTO_INCREMENT PRIMARY KEY,
     `Barrio` VARCHAR(100),
     `Estrato` INT,
     `UPZ` VARCHAR(100),
-    `Localidad` VARCHAR(100)
+    `Localidad` VARCHAR(100),
+    `IdEstrato` INT,
+    FOREIGN KEY (`IdEstrato`) REFERENCES Estrato(`IdEstrato`)
 );
 CREATE TABLE servicio (
     `IdServicio` INT AUTO_INCREMENT PRIMARY KEY,
+    `IdEvento` INT,
     `Servicio` INT,
     `Clase_de_servicio` VARCHAR(100),
-    `Origen_de_la_causa` VARCHAR(100),
-    `Hora_reporte` DATATIME,
+    `Hora_reporte` DATETIME,
     `Tiempo_de_respuesta` INT,
+    FOREIGN KEY (`IdEvento`) REFERENCES eventos(`IdEvento`)
 );
 CREATE TABLE afectados (
     `IdAFECTADOS` INT AUTO_INCREMENT PRIMARY KEY,
+    `IdEvento` INT,
     `HombresExpuestos` INT,
     `MujeresExpuestas` INT,
     `MenoresNinasExpuestas` INT,
@@ -61,6 +70,7 @@ CREATE TABLE afectados (
     `MujeresSinSignos` INT,
     `MenoresNinasSinSignos` INT,
     `MenoresNinosSinSignos` INT,
+    FOREIGN KEY (`IdEvento`) REFERENCES eventos(`IdEvento`)
 );
 
 CREATE TABLE Causa (
