@@ -219,7 +219,7 @@ Los resultados de este estudio demuestran la importancia de una gestión de dato
 
 # Planes a futuro
 
-###Expansión y Actualización de la Base de Datos:
+### Expansión y Actualización de la Base de Datos:
 > Integración con otras entidades de emergencia: Ampliar la base de datos para incluir información de otras entidades de emergencia en Bogotá, como la policía y servicios médicos de urgencia, para tener una visión más completa de la respuesta a incidentes en la ciudad.
 ### Modelos predictivos: 
 > Desarrollar algoritmos de inteligencia artificial y modelos predictivos que analicen los datos históricos para prever futuros incidentes.
