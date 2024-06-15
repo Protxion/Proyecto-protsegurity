@@ -214,9 +214,7 @@ ORDER BY Tiempo_de_respuesta DESC;
 ```
 # Conclusiones del proyecto, para bases de datos
 > El estudio realizado sobre los incidentes atendidos por el cuerpo de bomberos en Bogotá ha proporcionado una visión profunda y detallada de la naturaleza y frecuencia de las emergencias en la ciudad. A través de una base de datos robusta y bien estructurada, se recopilaron datos esenciales que permitieron identificar patrones significativos en los incidentes, tales como las áreas con mayor incidencia de emergencias, los tipos más comunes de incidentes y los tiempos de respuesta promedio.
-
 Este análisis detallado ha facilitado la evaluación de la eficiencia operativa del cuerpo de bomberos, destacando tanto sus fortalezas como las áreas que necesitan mejoras. Por ejemplo, se identificaron zonas geográficas que requieren una mayor presencia de recursos. Además, la base de datos ha permitido una consulta rápida y eficiente de la información, lo que mejora la capacidad de planificación y la toma de decisiones estratégicas.
-
 Los resultados de este estudio demuestran la importancia de una gestión de datos efectiva para optimizar la respuesta a emergencias y mejorar la seguridad pública. Al identificar patrones y tendencias en los incidentes, el cuerpo de bomberos puede implementar estrategias más precisas y efectivas, mejorar la asignación de recursos y reducir los tiempos de respuesta. En conclusión, este proyecto resalta la necesidad de inversiones continuas en tecnología de la información y capacitación, fortaleciendo así la capacidad de respuesta del cuerpo de bomberos y contribuyendo a una Bogotá más segura y resiliente.
 
 # Planes a futuro
