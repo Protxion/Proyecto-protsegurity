@@ -1,4 +1,27 @@
+<a name="readme-top"></a>
+
 # Proyecto-protsegurity
+
+> Este proyecto se centra en el análisis y gestión de datos de incidentes atendidos por el cuerpo de bomberos en la ciudad de Bogotá. Utilizando una base de datos robusta y bien estructurada, se recopilaron y organizaron datos detallados sobre diversos tipos de incidentes, desde incendios hasta emergencias médicas y rescates. La base de datos permite un almacenamiento eficiente y una consulta rápida de la información, facilitando la identificación de patrones, la evaluación de la respuesta de los bomberos y la implementación de mejoras operativas. Este enfoque basado en datos proporciona una visión integral de la frecuencia, localización y naturaleza de los incidentes, mejorando la capacidad de respuesta y planificación estratégica de los servicios de emergencia en Bogotá.
+
+## Built With
+
+- Sql
+- 
+## Authors
+
+👤 **Santiago Sandoval Urrego**
+
+- GitHub: [@user](https://github.com/Protxion)
+
+👤 **Jhon Alejandro Buitrago**
+
+- GitHub: [@user](https://github.com/Alecjandro)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
 ## Problema:
 La gestión eficiente y segura de grandes volúmenes de datos es un desafío crítico para un sistema de seguridad doméstica basado en IA. Se necesita una infraestructura de base de datos que soporte el almacenamiento, procesamiento y análisis de datos en tiempo real provenientes de múltiples fuentes (cámaras, micrófonos, sensores de movimiento).
 
