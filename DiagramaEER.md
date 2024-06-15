@@ -33,9 +33,9 @@ Aqui se encuentra el resultado de la aplicaion de estas 3 formas:
 
 Relaciones entre las tablas:
 
--Evento a Ubicación: Relación Uno a Uno.
--Evento a Servicio: Relación Uno a Muchos.
--Evento a PersonasAfectadas: Relación Uno a Uno.
--Evento tiene una relación de Muchos a Uno con Causa.
--La tabla Ubicacion tiene relaciones de Muchos a Uno con Estrato
--La tabla Evento tiene una relación de Uno a Muchos con Estacion.
+- Evento a Ubicación: Relación Uno a Uno.
+- Evento a Servicio: Relación Uno a Muchos.
+- Evento a PersonasAfectadas: Relación Uno a Uno.
+- Evento tiene una relación de Muchos a Uno con Causa.
+- La tabla Ubicacion tiene relaciones de Muchos a Uno con Estrato
+- La tabla Evento tiene una relación de Uno a Muchos con Estacion.
