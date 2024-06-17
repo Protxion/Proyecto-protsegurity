@@ -8,11 +8,12 @@ A continuación, se presenta un resumen de la estructura y los datos iniciales:
 
  Originalmente, la base de datos incluía numerosas tuplas, las cuales se redujeron a 100 para optimizar la gestión de la base de datos.
 
- #### Anexo tabla en archivo CSV, y la visualización de esta:
+ #### Anexo las tablas en archivo CSV, ademas de su visulizacion y explicacion de cada una:
 
-[DB_Incidentes-cruda.csv](https://github.com/user-attachments/files/15874270/DB_Incidentes-cruda.csv)
-
- 
+- [DB_Incidentes-cruda.csv](https://github.com/user-attachments/files/15874270/DB_Incidentes-cruda.csv)
+- [DB_Incidentes1FN.csv](https://github.com/user-attachments/files/15874366/DB_Incidentes1FN.csv)
+- [DB_Incidentes2FN.csv](https://github.com/user-attachments/files/15874383/DB_Incidentes2FN.csv)
+- [DB_Incidentes3FN.csv](https://github.com/user-attachments/files/15874390/DB_Incidentes3FN.csv)
 
 |FECHA DEL EVENTO|NÚMERO SERVICIO|ESTACIÓN|LATITUD|LONGITUD|BARRIO|ESTRATO|UPZ|LOCALIDAD|Hora reporte|Tiempo de Respuesta|SERVICIO|CLASE DE SERVICIO|SUBCLASE DE SERVICIO|TITULO|USO|CLASE DE USO|SUBCLASE DE USO|CLASE DE VEHICULO|SUBTIPO CLASE DE VEHICULO|ORIGEN DE LA CAUSA|CAUSAS|HOMBRES EXPUESTOS|MUJERES EXPUESTAS|MENORES NIÑAS EXPUESTAS|MENORES NIÑOS EXPUESTOS|HOMBRES AFECTADOS|MUJERES AFECTADAS|MENORES NIÑAS AFECTADAS|MENORES NIÑOS AFECTADOS|HOMBRES RESCATADOS|MUJERES RESCATADAS|MENORES NIÑAS RESCATADAS|MENORES NIÑOS RESCATADOS|HOMBRES HERIDOS|MUJERES HERIDAS|MENORES NIÑAS HERIDAS|MENORES NIÑOS HERIDOS|HOMBRES SIN SIGNOS|MUJERES SIN SIGNOS|MENORES NIÑAS SIN SIGNOS|MENORES NIÑOS SIN SIGNOS|
 |:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
@@ -233,6 +234,8 @@ Esta etapa nos permitió organizar de manera más estructurada la información, 
 
 Cada una de estas tablas fue diseñada para almacenar datos específicos relacionados con eventos, ubicaciones asociadas,
 detalles de los servicios involucrados y la información de las personas afectadas, optimizando así la eficiencia y la coherencia de nuestra base de datos para el proyecto.
+
+
 
 ## **A continuación las tablas de la Segunda Forma Normal (2FN):**
 
