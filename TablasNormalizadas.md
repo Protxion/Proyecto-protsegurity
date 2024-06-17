@@ -8,6 +8,12 @@ A continuación, se presenta un resumen de la estructura y los datos iniciales:
 
  Originalmente, la base de datos incluía numerosas tuplas, las cuales se redujeron a 100 para optimizar la gestión de la base de datos.
 
+ #### Anexo tabla en archivo CSV, y la visualización de esta.
+
+
+[Uploading DB_Incidentes-cruda.csv…]()
+ 
+
 |FECHA DEL EVENTO|NÚMERO SERVICIO|ESTACIÓN|LATITUD|LONGITUD|BARRIO|ESTRATO|UPZ|LOCALIDAD|Hora reporte|Tiempo de Respuesta|SERVICIO|CLASE DE SERVICIO|SUBCLASE DE SERVICIO|TITULO|USO|CLASE DE USO|SUBCLASE DE USO|CLASE DE VEHICULO|SUBTIPO CLASE DE VEHICULO|ORIGEN DE LA CAUSA|CAUSAS|HOMBRES EXPUESTOS|MUJERES EXPUESTAS|MENORES NIÑAS EXPUESTAS|MENORES NIÑOS EXPUESTOS|HOMBRES AFECTADOS|MUJERES AFECTADAS|MENORES NIÑAS AFECTADAS|MENORES NIÑOS AFECTADOS|HOMBRES RESCATADOS|MUJERES RESCATADAS|MENORES NIÑAS RESCATADAS|MENORES NIÑOS RESCATADOS|HOMBRES HERIDOS|MUJERES HERIDAS|MENORES NIÑAS HERIDAS|MENORES NIÑOS HERIDOS|HOMBRES SIN SIGNOS|MUJERES SIN SIGNOS|MENORES NIÑAS SIN SIGNOS|MENORES NIÑOS SIN SIGNOS|
 |:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
 |1/01/2020|5|B-3 SUR|458.675.670.000.008|-741.017.875.889.999|RESTREPO|3|38 RESTREPO|ANTONIO NARIÑO|12:11:00 a. m.|12:02:00 a. m.|21. FALSA ALARMA|21.1 INCENDIOS|21.1.1 ESTRUCTURALES| | | | | | |21.0.0  NO APLICA|NO APLICA| | | | | | | | | | | | | | | | | | | | |
