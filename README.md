@@ -90,6 +90,14 @@ Implementación de mecanismos de respaldo y recuperación para asegurar la conti
 Optimización para Consultas Complejas:
 Estructuras de índices y optimización de consultas para mejorar la eficiencia en la recuperación de datos.
 
+#### Distribucion del trabajo:
+- Investigación y Análisis del Tema: Santigo Sandoval-Alejandro Buitrago
+- Diseño de la Base de Datos: Alejandro Buitrago
+- Implementación de la Base de Datos: Alejandro Buitrago
+- Pruebas y Validación: Santiago Sandoval
+- Conclusiones y Futuros Aportes: Santiago Sandoval
+
+
 # Consultas
 
 ### Obtener todos los incidentes
